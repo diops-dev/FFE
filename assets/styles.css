@@ -131,12 +131,12 @@ p{margin:0 0 14px}
 
 .site-header{position:sticky;top:0;z-index:500;background:rgba(255,255,255,.92);
   backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--steel-100)}
-.site-header .container{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:96px;gap:20px}
 .brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
 /* Logo officiel FFE (SVG du design system) */
-.ffe-logo{display:block;height:40px;width:auto}
-.site-footer .ffe-logo{height:46px}
-@media(max-width:640px){.ffe-logo{height:34px}}
+.ffe-logo{display:block;height:68px;width:auto}
+.site-footer .ffe-logo{height:64px}
+@media(max-width:640px){.ffe-logo{height:48px}}
 .brand-mark{width:42px;height:42px;border-radius:var(--r-sm);background:var(--deep);
   display:grid;place-items:center;color:var(--ice);flex-shrink:0}
 .brand-mark svg{width:24px;height:24px}
@@ -234,17 +234,17 @@ p{margin:0 0 14px}
   outline:none;border-color:var(--glacier);box-shadow:0 0 0 3px rgba(14,111,168,.15)}
 
 /* ── Footer ─────────────────────────────────────────── */
-.site-footer{background:var(--ink);color:rgba(255,255,255,.7);padding:64px 0 28px;font-size:14px}
+.site-footer{background:#fff;border-top:1px solid var(--steel-100);color:var(--steel-700);padding:64px 0 28px;font-size:14px}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:44px}
-.site-footer h4{color:#fff;font-family:"JetBrains Mono";font-size:12px;letter-spacing:.12em;
+.site-footer h4{color:var(--ink);font-family:"JetBrains Mono";font-size:12px;letter-spacing:.12em;
   text-transform:uppercase;font-weight:500;margin-bottom:16px}
 .site-footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.site-footer a:hover{color:var(--ice)}
-.site-footer .brand-name{color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;
+.site-footer a:hover{color:var(--glacier)}
+.site-footer .brand-name{color:var(--ink)}
+.footer-bottom{border-top:1px solid var(--steel-100);padding-top:22px;
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px}
-.footer-bottom .mono{color:rgba(255,255,255,.5);letter-spacing:.04em}
-.footer-bottom a{color:rgba(255,255,255,.6)}
+.footer-bottom .mono{color:var(--steel-500,#6b7190);letter-spacing:.04em}
+.footer-bottom a{color:var(--steel-700)}
 
 /* ── Page header (sous-pages) ───────────────────────── */
 .page-head{background:linear-gradient(180deg,var(--deep),#06314f);color:#fff;
@@ -272,8 +272,8 @@ p{margin:0 0 14px}
   .footer-grid{grid-template-columns:1fr 1fr}
   .nav,.topbar .tb-social{display:none}
   .nav-toggle{display:flex}
-  .site-header .container{height:64px}
-  .nav.open{display:flex;position:absolute;top:64px;left:0;right:0;flex-direction:column;
+  .site-header .container{height:72px}
+  .nav.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;
     background:var(--white);border-bottom:1px solid var(--steel-100);padding:12px;gap:2px;box-shadow:var(--sh-2)}
   .nav.open a{padding:13px 14px}
   /* dropdown mobile */
@@ -288,3 +288,19 @@ p{margin:0 0 14px}
   .header-cta .btn-ghost{display:none}
   .hero-stats{gap:24px}
 }
+
+/* Portfolio véhicules */
+.vehicle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.vehicle-card{background:var(--white);border:1px solid var(--steel-100);border-radius:var(--r-md);box-shadow:var(--sh-1);overflow:hidden;display:flex;flex-direction:column}
+.vehicle-photo{aspect-ratio:4/3;background:var(--frost-blue);color:var(--glacier);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;font-family:"JetBrains Mono";font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.vehicle-body{padding:22px;display:flex;flex-direction:column;gap:12px;flex:1}
+.vehicle-body h3{margin:0}
+.vehicle-specs{margin:0;display:flex;flex-direction:column;gap:6px}
+.vehicle-specs div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--steel-100);padding-bottom:6px;font-size:14px}
+.vehicle-specs dt{color:var(--steel-700)}
+.vehicle-specs dd{margin:0;font-weight:600;color:var(--ink)}
+.vehicle-body .btn{margin-top:auto;align-self:flex-start}
+.btn-ghost-dark{border:1px solid var(--ice);color:var(--deep);background:transparent}
+.btn-ghost-dark:hover{background:var(--frost-blue)}
+@media(max-width:960px){.vehicle-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.vehicle-grid{grid-template-columns:1fr}}
